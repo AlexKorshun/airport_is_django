@@ -1,0 +1,6 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><title>Расписание</title></head>
+<body><h1>Расписание рейсов</h1><ul>
+{% for flight in flights %}
+<li>{{ flight }} — {{ flight.price }} руб. <a href="{% url 'book_flight' flight.id %}">Забронировать</a></li>
+{% empty %}<li>Рейсов нет</li>{% endfor %}
+</ul></body></html>

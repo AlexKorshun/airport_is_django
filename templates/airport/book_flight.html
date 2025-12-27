@@ -1,0 +1,4 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><title>Бронирование</title></head>
+<body><h1>{{ flight }}</h1>
+<form method="post">{% csrf_token %}{{ form.as_p }}<button type="submit">Сохранить</button></form>
+</body></html>
